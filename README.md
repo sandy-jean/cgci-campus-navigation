@@ -5,6 +5,16 @@ Discrete Structures 1 project that treats the campus as a graph.
 
 **Live site:** https://cgci-campus-navigation.web.app
 
+## Developers
+
+| Developer | Contribution |
+| --- | --- |
+| **Sandy Gabitanan** | System design and implementation |
+| **Chynna Madriaga** | System design and implementation |
+
+College of Computer Studies, Core Gateway College, Inc. — submitted as a final project
+for Discrete Structures 1.
+
 A visitor picks a starting point and a destination, and the system finds the shortest
 walking route using **Dijkstra's algorithm** over a graph whose vertices are campus
 locations and whose edges are the walkable paths between them. The same graph is also
@@ -261,6 +271,16 @@ once per data change, then reused across every route calculation.
 - Routes are guidance, not official wayfinding.
 
 ---
+
+## Credits and acknowledgement
+
+The campus layout, building names and floor assignments are taken from the official
+**Core Gateway College, Inc. Campus Site Map**, which remains the property of the
+College. The College is thanked for making that plan available, and for identifying the
+buildings on it that still require names.
+
+The seal used as the system logo and browser tab icon is the official Core Gateway
+College mark, reproduced without alteration.
 
 ## Academic integrity note
 

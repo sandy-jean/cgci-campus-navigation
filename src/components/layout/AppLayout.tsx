@@ -191,10 +191,13 @@ export function AppLayout() {
       <footer className="shrink-0 border-t border-ink-200 bg-white">
         <div className="mx-auto flex max-w-[1600px] flex-col gap-1 px-4 py-4 text-xs text-ink-500 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <p>
-            CGCI Campus Navigation — a Discrete Structures project on graph theory,
+            CGCI Campus Navigation — a Discrete Structures 1 project on graph theory,
             reachability and shortest paths.
+            <span className="mt-0.5 block sm:mt-0 sm:ml-1 sm:inline">
+              Developed by Sandy Gabitanan and Chynna Madriaga.
+            </span>
           </p>
-          <p>
+          <p className="sm:text-right">
             Routes are estimates for guidance, not official wayfinding.
           </p>
         </div>

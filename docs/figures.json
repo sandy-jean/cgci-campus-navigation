@@ -1,0 +1,700 @@
+{
+  "stats": {
+    "vertices": 15,
+    "edgesStored": 22,
+    "edgesOpen": 21,
+    "edgesClosed": 1,
+    "components": 1,
+    "density": 0.2,
+    "averageDegree": 2.8,
+    "selfLoops": 0
+  },
+  "locations": [
+    {
+      "id": "core-2",
+      "name": "CORE 2",
+      "type": "Academic Building",
+      "category": "academic",
+      "footprint": "building",
+      "verified": true,
+      "facilities": [
+        "Basic Education (5th floor)"
+      ],
+      "keywords": [
+        "core 2",
+        "core2",
+        "basic ed",
+        "basic education",
+        "building",
+        "campus 2"
+      ],
+      "x": 175,
+      "y": 195
+    },
+    {
+      "id": "core-1",
+      "name": "CORE 1",
+      "type": "Academic Building",
+      "category": "academic",
+      "footprint": "building",
+      "verified": true,
+      "facilities": [
+        "BSBA (2nd floor)",
+        "BEED (ground floor)",
+        "BSED",
+        "Classroom (ground floor)"
+      ],
+      "keywords": [
+        "core 1",
+        "core1",
+        "bsba",
+        "beed",
+        "bsed",
+        "classroom",
+        "campus 1"
+      ],
+      "x": 419,
+      "y": 195
+    },
+    {
+      "id": "core-4",
+      "name": "CORE 4",
+      "type": "Academic Building",
+      "category": "academic",
+      "footprint": "building",
+      "verified": true,
+      "facilities": [
+        "QAA/HS Library (2nd floor)",
+        "College Library (3rd floor)",
+        "i-CORE and VPAA Office (4th floor)",
+        "Canteen (ground floor)"
+      ],
+      "keywords": [
+        "core 4",
+        "core4",
+        "library",
+        "college library",
+        "qaa",
+        "hs library",
+        "canteen",
+        "dining",
+        "food",
+        "i-core",
+        "vpaa",
+        "campus 4"
+      ],
+      "x": 341,
+      "y": 309
+    },
+    {
+      "id": "core-5",
+      "name": "CORE 5",
+      "type": "Administrative and Academic Building",
+      "category": "administrative",
+      "footprint": "building",
+      "verified": true,
+      "facilities": [
+        "Admin Office",
+        "HR Office",
+        "Finance and Accounting",
+        "BSCS Computer Laboratory (Rooms Comlab 1-3)",
+        "BSED",
+        "OOP",
+        "SGS Faculty"
+      ],
+      "keywords": [
+        "core 5",
+        "core5",
+        "admin",
+        "administration",
+        "hr",
+        "human resources",
+        "finance",
+        "accounting",
+        "oop",
+        "bscs",
+        "comlab",
+        "computer laboratory",
+        "computing",
+        "campus 5"
+      ],
+      "x": 328,
+      "y": 400
+    },
+    {
+      "id": "core-3",
+      "name": "CORE 3",
+      "type": "Academic Building",
+      "category": "academic",
+      "footprint": "building",
+      "verified": true,
+      "facilities": [
+        "BAPS Classroom (rooms 301-303, ground floor, up to 4th floor)"
+      ],
+      "keywords": [
+        "core 3",
+        "core3",
+        "baps",
+        "classroom",
+        "rooms",
+        "campus 3"
+      ],
+      "x": 425,
+      "y": 425
+    },
+    {
+      "id": "clinic-building",
+      "name": "Clinic Building",
+      "type": "Clinic and Guidance Building",
+      "category": "service",
+      "footprint": "building",
+      "verified": false,
+      "facilities": [
+        "Clinic",
+        "Basic Education Guidance Office",
+        "Stock Room",
+        "BAPS Faculty",
+        "BSED Faculty"
+      ],
+      "keywords": [
+        "clinic",
+        "health",
+        "guidance",
+        "stock room",
+        "baps faculty",
+        "bsed faculty",
+        "basic ed guidance"
+      ],
+      "x": 553,
+      "y": 274
+    },
+    {
+      "id": "north-wing",
+      "name": "North Wing",
+      "type": "Building",
+      "category": "facility",
+      "footprint": "building",
+      "verified": false,
+      "facilities": [],
+      "keywords": [
+        "north wing",
+        "north building",
+        "unnamed building",
+        "bldg name",
+        "large building"
+      ],
+      "x": 697,
+      "y": 150
+    },
+    {
+      "id": "guidance-building",
+      "name": "Student Affairs Building",
+      "type": "Student Affairs Building",
+      "category": "administrative",
+      "footprint": "building",
+      "verified": false,
+      "facilities": [
+        "MDD (2nd floor)",
+        "OSA (ground floor)",
+        "OAD (ground floor)"
+      ],
+      "keywords": [
+        "mdd",
+        "osa",
+        "oad",
+        "student affairs",
+        "guidance",
+        "office",
+        "bldg name"
+      ],
+      "x": 622,
+      "y": 430
+    },
+    {
+      "id": "shs-building",
+      "name": "Senior High School Building",
+      "type": "Senior High School Building",
+      "category": "academic",
+      "footprint": "building",
+      "verified": false,
+      "facilities": [
+        "Senior High School"
+      ],
+      "keywords": [
+        "senior high school",
+        "shs",
+        "shs building",
+        "high school",
+        "bldg name"
+      ],
+      "x": 805,
+      "y": 404
+    },
+    {
+      "id": "parking-area",
+      "name": "Central Parking Area",
+      "type": "Parking Area",
+      "category": "facility",
+      "footprint": "area",
+      "verified": true,
+      "facilities": [
+        "Student parking",
+        "Staff parking"
+      ],
+      "keywords": [
+        "parking",
+        "car",
+        "vehicle",
+        "lot",
+        "central parking"
+      ],
+      "x": 620,
+      "y": 320
+    },
+    {
+      "id": "shs-parking-area",
+      "name": "SHS Parking Area",
+      "type": "Parking Area",
+      "category": "facility",
+      "footprint": "area",
+      "verified": true,
+      "facilities": [
+        "Parking"
+      ],
+      "keywords": [
+        "parking",
+        "car",
+        "vehicle",
+        "lot",
+        "shs parking",
+        "east parking"
+      ],
+      "x": 766,
+      "y": 282
+    },
+    {
+      "id": "school-ground",
+      "name": "School Ground",
+      "type": "Open Ground",
+      "category": "recreation",
+      "footprint": "area",
+      "verified": true,
+      "facilities": [
+        "Open ground",
+        "Marked court area"
+      ],
+      "keywords": [
+        "school ground",
+        "field",
+        "court",
+        "ground",
+        "open area",
+        "playground"
+      ],
+      "x": 580,
+      "y": 372
+    },
+    {
+      "id": "shs-ground",
+      "name": "SHS School Ground",
+      "type": "Open Ground",
+      "category": "recreation",
+      "footprint": "area",
+      "verified": true,
+      "facilities": [
+        "Open ground"
+      ],
+      "keywords": [
+        "shs",
+        "school ground",
+        "field",
+        "ground",
+        "open area"
+      ],
+      "x": 812,
+      "y": 340
+    },
+    {
+      "id": "gate-1",
+      "name": "Gate 1",
+      "type": "Gate",
+      "category": "entrance",
+      "footprint": "gate",
+      "verified": true,
+      "facilities": [
+        "Entry point"
+      ],
+      "keywords": [
+        "gate",
+        "entrance",
+        "entry",
+        "main",
+        "arrival",
+        "gate1",
+        "gate 1"
+      ],
+      "x": 324,
+      "y": 470
+    },
+    {
+      "id": "gate-2",
+      "name": "Gate 2",
+      "type": "Gate",
+      "category": "entrance",
+      "footprint": "gate",
+      "verified": true,
+      "facilities": [
+        "Entry point"
+      ],
+      "keywords": [
+        "gate",
+        "entrance",
+        "entry",
+        "gate2",
+        "gate 2"
+      ],
+      "x": 495,
+      "y": 468
+    }
+  ],
+  "paths": [
+    {
+      "from": "Central Parking Area",
+      "to": "School Ground",
+      "distance": 40,
+      "walkable": true,
+      "direction": "both"
+    },
+    {
+      "from": "Central Parking Area",
+      "to": "SHS Parking Area",
+      "distance": 120,
+      "walkable": true,
+      "direction": "both"
+    },
+    {
+      "from": "Clinic Building",
+      "to": "Central Parking Area",
+      "distance": 45,
+      "walkable": true,
+      "direction": "both"
+    },
+    {
+      "from": "Clinic Building",
+      "to": "Student Affairs Building",
+      "distance": 175,
+      "walkable": true,
+      "direction": "both"
+    },
+    {
+      "from": "CORE 1",
+      "to": "North Wing",
+      "distance": 55,
+      "walkable": true,
+      "direction": "both"
+    },
+    {
+      "from": "CORE 1",
+      "to": "Central Parking Area",
+      "distance": 200,
+      "walkable": true,
+      "direction": "both"
+    },
+    {
+      "from": "CORE 2",
+      "to": "CORE 1",
+      "distance": 60,
+      "walkable": true,
+      "direction": "both"
+    },
+    {
+      "from": "CORE 3",
+      "to": "Gate 2",
+      "distance": 25,
+      "walkable": true,
+      "direction": "both"
+    },
+    {
+      "from": "CORE 4",
+      "to": "CORE 1",
+      "distance": 45,
+      "walkable": true,
+      "direction": "both"
+    },
+    {
+      "from": "CORE 4",
+      "to": "CORE 2",
+      "distance": 85,
+      "walkable": true,
+      "direction": "both"
+    },
+    {
+      "from": "CORE 5",
+      "to": "CORE 3",
+      "distance": 30,
+      "walkable": true,
+      "direction": "both"
+    },
+    {
+      "from": "CORE 5",
+      "to": "CORE 4",
+      "distance": 30,
+      "walkable": true,
+      "direction": "both"
+    },
+    {
+      "from": "Gate 1",
+      "to": "CORE 5",
+      "distance": 25,
+      "walkable": true,
+      "direction": "both"
+    },
+    {
+      "from": "Gate 1",
+      "to": "CORE 3",
+      "distance": 50,
+      "walkable": true,
+      "direction": "both"
+    },
+    {
+      "from": "Gate 1",
+      "to": "Gate 2",
+      "distance": 175,
+      "walkable": true,
+      "direction": "both"
+    },
+    {
+      "from": "Gate 2",
+      "to": "Student Affairs Building",
+      "distance": 110,
+      "walkable": true,
+      "direction": "both"
+    },
+    {
+      "from": "North Wing",
+      "to": "SHS Parking Area",
+      "distance": 150,
+      "walkable": true,
+      "direction": "both"
+    },
+    {
+      "from": "School Ground",
+      "to": "Student Affairs Building",
+      "distance": 45,
+      "walkable": true,
+      "direction": "both"
+    },
+    {
+      "from": "SHS Parking Area",
+      "to": "SHS School Ground",
+      "distance": 70,
+      "walkable": true,
+      "direction": "both"
+    },
+    {
+      "from": "SHS School Ground",
+      "to": "Senior High School Building",
+      "distance": 35,
+      "walkable": true,
+      "direction": "both"
+    },
+    {
+      "from": "Student Affairs Building",
+      "to": "Senior High School Building",
+      "distance": 150,
+      "walkable": true,
+      "direction": "both"
+    }
+  ],
+  "closedPaths": [
+    {
+      "from": "CORE 1",
+      "to": "Clinic Building",
+      "distance": 40,
+      "note": "Demonstration only: stored closed to show how reopening a path changes the shortest route. This is not a real closure on campus."
+    }
+  ],
+  "examples": [
+    {
+      "from": "Gate 1",
+      "to": "Senior High School Building",
+      "reachable": true,
+      "distance": 335,
+      "path": [
+        "Gate 1",
+        "CORE 3",
+        "Gate 2",
+        "Student Affairs Building",
+        "Senior High School Building"
+      ],
+      "relaxations": 20,
+      "hops": 4,
+      "walkMinutes": 4
+    },
+    {
+      "from": "CORE 1",
+      "to": "Central Parking Area",
+      "reachable": true,
+      "distance": 200,
+      "path": [
+        "CORE 1",
+        "Central Parking Area"
+      ],
+      "relaxations": 13,
+      "hops": 1,
+      "walkMinutes": 3
+    },
+    {
+      "from": "Gate 1",
+      "to": "CORE 1",
+      "reachable": true,
+      "distance": 100,
+      "path": [
+        "Gate 1",
+        "CORE 5",
+        "CORE 4",
+        "CORE 1"
+      ],
+      "relaxations": 9,
+      "hops": 3,
+      "walkMinutes": 1
+    },
+    {
+      "from": "Gate 2",
+      "to": "Clinic Building",
+      "reachable": true,
+      "distance": 240,
+      "path": [
+        "Gate 2",
+        "Student Affairs Building",
+        "School Ground",
+        "Central Parking Area",
+        "Clinic Building"
+      ],
+      "relaxations": 19,
+      "hops": 4,
+      "walkMinutes": 3
+    },
+    {
+      "from": "CORE 4",
+      "to": "CORE 3",
+      "reachable": true,
+      "distance": 60,
+      "path": [
+        "CORE 4",
+        "CORE 5",
+        "CORE 3"
+      ],
+      "relaxations": 10,
+      "hops": 2,
+      "walkMinutes": 1
+    },
+    {
+      "from": "CORE 2",
+      "to": "SHS School Ground",
+      "reachable": true,
+      "distance": 335,
+      "path": [
+        "CORE 2",
+        "CORE 1",
+        "North Wing",
+        "SHS Parking Area",
+        "SHS School Ground"
+      ],
+      "relaxations": 20,
+      "hops": 4,
+      "walkMinutes": 4
+    }
+  ],
+  "reopened": {
+    "distance": 85,
+    "path": [
+      "CORE 1",
+      "Clinic Building",
+      "Central Parking Area"
+    ]
+  },
+  "bfs": {
+    "start": "Gate 1",
+    "order": [
+      {
+        "id": "gate-1",
+        "name": "Gate 1",
+        "hops": 0
+      },
+      {
+        "id": "core-5",
+        "name": "CORE 5",
+        "hops": 1
+      },
+      {
+        "id": "core-3",
+        "name": "CORE 3",
+        "hops": 1
+      },
+      {
+        "id": "gate-2",
+        "name": "Gate 2",
+        "hops": 1
+      },
+      {
+        "id": "core-4",
+        "name": "CORE 4",
+        "hops": 2
+      },
+      {
+        "id": "guidance-building",
+        "name": "Student Affairs Building",
+        "hops": 2
+      },
+      {
+        "id": "core-1",
+        "name": "CORE 1",
+        "hops": 3
+      },
+      {
+        "id": "core-2",
+        "name": "CORE 2",
+        "hops": 3
+      },
+      {
+        "id": "school-ground",
+        "name": "School Ground",
+        "hops": 3
+      },
+      {
+        "id": "shs-building",
+        "name": "Senior High School Building",
+        "hops": 3
+      },
+      {
+        "id": "clinic-building",
+        "name": "Clinic Building",
+        "hops": 3
+      },
+      {
+        "id": "north-wing",
+        "name": "North Wing",
+        "hops": 4
+      },
+      {
+        "id": "parking-area",
+        "name": "Central Parking Area",
+        "hops": 4
+      },
+      {
+        "id": "shs-ground",
+        "name": "SHS School Ground",
+        "hops": 4
+      },
+      {
+        "id": "shs-parking-area",
+        "name": "SHS Parking Area",
+        "hops": 5
+      }
+    ]
+  },
+  "adjacencyList": "const campusGraph = {\n  core-2: [\n      { node: \"core-1\", distance: 60 },\n      { node: \"core-4\", distance: 85 },\n    ],\n  core-1: [\n      { node: \"core-4\", distance: 45 },\n      { node: \"north-wing\", distance: 55 },\n      { node: \"core-2\", distance: 60 },\n      { node: \"parking-area\", distance: 200 },\n    ],\n  core-4: [\n      { node: \"core-5\", distance: 30 },\n      { node: \"core-1\", distance: 45 },\n      { node: \"core-2\", distance: 85 },\n    ],\n  core-5: [\n      { node: \"gate-1\", distance: 25 },\n      { node: \"core-3\", distance: 30 },\n      { node: \"core-4\", distance: 30 },\n    ],\n  core-3: [\n      { node: \"gate-2\", distance: 25 },\n      { node: \"core-5\", distance: 30 },\n      { node: \"gate-1\", distance: 50 },\n    ],\n  clinic-building: [\n      { node: \"parking-area\", distance: 45 },\n      { node: \"guidance-building\", distance: 175 },\n    ],\n  north-wing: [\n      { node: \"core-1\", distance: 55 },\n      { node: \"shs-parking-area\", distance: 150 },\n    ],\n  guidance-building: [\n      { node: \"school-ground\", distance: 45 },\n      { node: \"gate-2\", distance: 110 },\n      { node: \"shs-building\", distance: 150 },\n      { node: \"clinic-building\", distance: 175 },\n    ],\n  shs-building: [\n      { node: \"shs-ground\", distance: 35 },\n      { node: \"guidance-building\", distance: 150 },\n    ],\n  parking-area: [\n      { node: \"school-ground\", distance: 40 },\n      { node: \"clinic-building\", distance: 45 },\n      { node: \"shs-parking-area\", distance: 120 },\n      { node: \"core-1\", distance: 200 },\n    ],\n  shs-parking-area: [\n      { node: \"shs-ground\", distance: 70 },\n      { node: \"parking-area\", distance: 120 },\n      { node: \"north-wing\", distance: 150 },\n    ],\n  school-ground: [\n      { node: \"parking-area\", distance: 40 },\n      { node: \"guidance-building\", distance: 45 },\n    ],\n  shs-ground: [\n      { node: \"shs-building\", distance: 35 },\n      { node: \"shs-parking-area\", distance: 70 },\n    ],\n  gate-1: [\n      { node: \"core-5\", distance: 25 },\n      { node: \"core-3\", distance: 50 },\n      { node: \"gate-2\", distance: 175 },\n    ],\n  gate-2: [\n      { node: \"core-3\", distance: 25 },\n      { node: \"guidance-building\", distance: 110 },\n      { node: \"gate-1\", distance: 175 },\n    ],\n};",
+  "matrixMarkdown": "| | core-2 | core-1 | core-4 | core-5 | core-3 | clinic-building | north-wing | guidance-building | shs-building | parking-area | shs-parking-area | school-ground | shs-ground | gate-1 | gate-2 |\n| ------- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |\n| core-2 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |\n| core-1 | 1 | 0 | 1 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |\n| core-4 | 1 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |\n| core-5 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |\n| core-3 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 |\n| clinic-building | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |\n| north-wing | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |\n| guidance-building | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |\n| shs-building | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |\n| parking-area | 0 | 1 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 |\n| shs-parking-area | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 | 0 | 0 |\n| school-ground | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |\n| shs-ground | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |\n| gate-1 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |\n| gate-2 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |",
+  "warnings": []
+}
