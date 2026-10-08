@@ -1,0 +1,25 @@
+{
+  "name": "CGCI Campus Navigation",
+  "short_name": "CGCI Nav",
+  "description": "Interactive campus navigation for Core Gateway College, built on graph theory and Dijkstra's shortest-path algorithm.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f7f7f4",
+  "theme_color": "#1f4d3a",
+  "icons": [
+    {
+      "src": "/cgci-logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/cgci-logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

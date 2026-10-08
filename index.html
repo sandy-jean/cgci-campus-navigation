@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#1f4d3a" />
+
+    <title>CGCI Campus Navigation</title>
+    <meta
+      name="description"
+      content="Interactive campus navigation system for Core Gateway College. Find the shortest walking route between any two campus buildings using graph theory and Dijkstra's algorithm."
+    />
+    <link rel="canonical" href="https://cgci-campus-navigation.web.app/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CGCI Campus Navigation" />
+    <meta
+      property="og:description"
+      content="Interactive campus navigation for Core Gateway College, built on graph theory and shortest-path algorithms."
+    />
+    <meta property="og:url" content="https://cgci-campus-navigation.web.app/" />
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/cgci-logo.png"
+    />
+    <link rel="apple-touch-icon" href="/cgci-logo.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!--
+      Preconnect to the Firebase endpoints used at runtime so the SDK starts its
+      connection before the bundle finishes parsing.
+    -->
+    <link rel="preconnect" href="https://firestore.googleapis.com" />
+    <link rel="preconnect" href="https://identitytoolkit.googleapis.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+
+    <!--
+      Warm Inter / system font stack. Inter is loaded locally via a font-face-free
+      system stack so there is no third-party request blocking first paint.
+    -->
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!--
+      No-JavaScript fallback. Firebase Auth is the only way to reach the admin
+      dashboard, so it cannot work without JavaScript; this states that plainly
+      instead of leaving a blank page.
+    -->
+    <noscript>
+      <div style="font-family: system-ui, sans-serif; max-width: 40rem; margin: 4rem auto; padding: 0 1.5rem">
+        <h1 style="font-size: 1.5rem">JavaScript is required</h1>
+        <p style="line-height: 1.6">
+          CGCI Campus Navigation calculates walking routes in your browser and reads live campus
+          data from Firebase, so it needs JavaScript enabled. Please turn it on and reload this
+          page.
+        </p>
+      </div>
+    </noscript>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

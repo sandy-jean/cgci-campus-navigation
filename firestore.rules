@@ -1,0 +1,136 @@
+rules_version = '2';
+
+/**
+ * Firestore Security Rules — CGCI Campus Navigation
+ *
+ * Security model
+ * --------------
+ * Campus navigation data is public: every visitor needs to read buildings and
+ * walking paths in order to route. Nothing about that data is sensitive, it is a
+ * published campus plan, so requiring a sign-in to read it would only add friction
+ * without adding confidentiality.
+ *
+ * Writes are the sensitive half. Only an administrator may create, update or delete
+ * anything.
+ *
+ * Administrator identity is an allowlist: a signed-in user is an administrator when
+ * a document exists at /admins/{their own email address}. That document can only be
+ * created or changed by an existing administrator, so nobody can promote themselves
+ * - the bootstrap entry is written out-of-band by the provisioning script using an
+ * administrative credential that never reaches the browser.
+ *
+ * Using an allowlist rather than a custom claim is a deliberate trade-off. A claim
+ * would be marginally cheaper to read, but granting one requires a server-side
+ * admin credential, whereas adding a colleague as an administrator here is a single
+ * document that any existing administrator can write from the dashboard. For a
+ * campus system maintained by a small team, that is the more maintainable choice.
+ */
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ------------------------------------------------------ helpers
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    /**
+     * True only when the caller is signed in and their own email address appears in
+     * the administrators allowlist. Keyed by request.auth.token.email, so the check
+     * cannot be redirected at another account's record.
+     */
+    function isAdmin() {
+      return isSignedIn()
+        && exists(/databases/$(database)/documents/admins/$(request.auth.token.email));
+    }
+
+    // Writes are restricted further than reads: an inactive location or a closed
+    // path stays readable so visitors see accurate information, but nobody may
+    // quietly flip the flags that routing depends on.
+    function isValidLocation() {
+      return request.resource.data.keys()
+        .hasAll(['name', 'category', 'x', 'y', 'isActive'])
+        && request.resource.data.name is string
+        && request.resource.data.name.size() > 0
+        && request.resource.data.name.size() <= 120
+        && request.resource.data.x is number
+        && request.resource.data.y is number
+        && request.resource.data.x >= 0 && request.resource.data.x <= 1000
+        && request.resource.data.y >= 0 && request.resource.data.y <= 620
+        && request.resource.data.category in
+          ['academic', 'administrative', 'service', 'recreation', 'facility', 'entrance', 'landmark']
+        && request.resource.data.isActive is bool;
+    }
+
+    function isValidEdge() {
+      return request.resource.data.keys().hasAll(['from', 'to', 'distance', 'walkable'])
+        && request.resource.data.from is string
+        && request.resource.data.to is string
+        && request.resource.data.from != request.resource.data.to
+        // A zero or negative weight would break Dijkstra, which assumes strictly
+        // non-negative edge costs, so it is rejected at the database boundary.
+        && request.resource.data.distance is number
+        && request.resource.data.distance > 0
+        && request.resource.data.distance <= 100000
+        && request.resource.data.walkable is bool;
+    }
+
+    // -------------------------------------------- administrators (V)
+
+    match /admins/{email} {
+      // A signed-in user may read only their own record, which is how the client
+      // learns whether to show the admin menu. Knowing your own status is not a
+      // disclosure about anyone else.
+      allow get: if isSignedIn() && request.auth.token.email == email;
+
+      // Listing reveals the whole team, and every change to the allowlist is an
+      // escalation, so both are reserved for existing administrators.
+      allow list: if isAdmin();
+      allow write: if isAdmin();
+    }
+
+    // -------------------------------------------------- locations (V)
+
+    match /locations/{locationId} {
+      // Public read: the map, the directory and the search index all need this.
+      allow read: if true;
+
+      allow create, update: if isAdmin() && isValidLocation();
+      allow delete: if isAdmin();
+    }
+
+    // ----------------------------------------------------- edges (E)
+
+    match /edges/{edgeId} {
+      allow read: if true;
+
+      // The endpoints must be locations that really exist. Without this check a
+      // typo would create an edge pointing at a non-existent vertex, and the graph
+      // builder would have to silently drop it later.
+      allow create, update: if isAdmin()
+        && isValidEdge()
+        && exists(/databases/$(database)/documents/locations/$(request.resource.data.from))
+        && exists(/databases/$(database)/documents/locations/$(request.resource.data.to));
+
+      allow delete: if isAdmin();
+    }
+
+    // --------------------------------------------------- settings
+
+    match /settings/{docId} {
+      // The dataset provenance notice is public so the warning banner can render
+      // before sign-in.
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // ------------------------------------- everything else: denied
+
+    // Any collection not explicitly matched above is closed to everyone. Adding a
+    // new collection therefore fails safe instead of becoming world-writable by
+    // omission.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

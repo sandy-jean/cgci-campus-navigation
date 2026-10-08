@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "cgci-campus-navigation",
+    "cgci": "cgci-campus-navigation"
+  }
+}
